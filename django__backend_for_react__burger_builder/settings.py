@@ -72,6 +72,13 @@ TEMPLATES = [
 
 WSGI_APPLICATION = "django__backend_for_react__burger_builder.wsgi.application"
 
+# for REST auth
+REST_FRAMEWORK = {
+    "DEFAULT_AUTHENTICATION_CLASSES": (
+        "rest_framework_simplejwt.authentication.JWTAuthentication",
+    )
+}
+
 
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases

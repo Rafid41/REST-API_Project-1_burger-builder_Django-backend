@@ -12,7 +12,7 @@ from rest_framework_simplejwt.views import (
 
 router = routers.SimpleRouter()
 router.register(r"users", UserViewSet)
-router.register(r"orders", OrderViewSet)
+router.register(r"orders", OrderViewSet, basename="orders")
 
 urlpatterns = [
     path("token/", TokenObtainPairView.as_view(), name="token_obtain_pair"),

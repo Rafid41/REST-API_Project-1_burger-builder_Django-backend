@@ -75,7 +75,7 @@ class Order(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
 
     # OneToOneField is similar to Foreignkey
-    # ingrediet id
+    # ingredient id
     ingredients = models.OneToOneField(Ingredient, on_delete=models.CASCADE)
     customer = models.OneToOneField(CustomerDetail, on_delete=models.CASCADE)
 

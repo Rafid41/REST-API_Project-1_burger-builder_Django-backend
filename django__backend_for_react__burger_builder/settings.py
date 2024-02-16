@@ -38,10 +38,12 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "rest_framework",
+    "corsheaders",
     "api",
 ]
 
 MIDDLEWARE = [
+    "corsheaders.middleware.CorsMiddleware",  # added at the top
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
@@ -69,6 +71,10 @@ TEMPLATES = [
         },
     },
 ]
+
+# j react app nia kaj korbo tar link, ekhane localhost:3000 e react app cholbe
+CORS_ALLOWED_ORIGINS = ["http://localhost:3000"]
+
 
 WSGI_APPLICATION = "django__backend_for_react__burger_builder.wsgi.application"
 

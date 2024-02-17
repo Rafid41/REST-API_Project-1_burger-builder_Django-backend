@@ -18,9 +18,9 @@ class OrderViewSet(viewsets.ModelViewSet):
     serializer_class = OrderSerializer
 
     # if user is not authenticated, he can't view it
-    permission_classes = [
-        IsAuthenticated,
-    ]
+    #permission_classes = [
+    #    IsAuthenticated,
+    #]
 
     # filter, urls e api/orders/1  : ehane "1" id, ei id hishebe filter
     def get_queryset(self):
